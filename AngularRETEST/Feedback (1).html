@@ -1,0 +1,325 @@
+<!-- 	
+				Author: Temperature
+				Date: 13-Nov-2018
+				Content:1)Form Validation using JavaScript
+						2) how to generate random number?
+-->
+
+<html>
+<head>
+<title>Feedback</title>
+</head>
+<body>
+
+<script>
+
+function checkName()
+{
+	var str = document.getElementById("nmid");
+	regExp = /^[A-Za-z ]{2,30}$/;
+	
+	if(regExp.test(str.value))
+	{
+		//alert("true");
+		return ;
+	}
+	else 
+	{
+		if(str.value.length==0)
+		{
+			//If the field is empty error
+			document.getElementById("erid1").innerHTML="This field is compulsory.";
+		}
+		else
+		{
+			//If the pattern does not match i.e. numbers are included
+			//alert("false");
+			document.getElementById("erid1").innerHTML="Please enter a valid name";
+		}
+	}
+	
+}
+
+function errClear1()
+{
+	document.getElementById("erid1").innerHTML="";
+}
+
+//Email validation
+function checkEmail()
+{
+	var str = document.getElementById("emid");
+	regex = /[a-z0-9]+@[a-z0-9]+\.com$/;
+	
+	if(regex.test(str.value))
+	{
+		return ;
+	}
+	else
+	{
+		if(str.value.length==0)
+		{
+			document.getElementById("erid2").innerHTML="This field is compulsory";
+		}
+		else
+		{
+			document.getElementById("erid2").innerHTML="Enter a valid email id";
+		}
+	}
+	
+}
+function errClear2()
+{
+	document.getElementById("erid2").innerHTML="";
+}
+
+function checkMob()
+{
+	var str = document.getElementById("mbid");
+	regex = /[789]\d{9}$/;
+	
+	if(regex.test(str.value))
+	{
+		return ;
+	}
+	else
+	{
+		if(str.value.length==0)
+		{
+			document.getElementById("erid3").innerHTML="This field is compulsory";
+		}
+		else
+		{
+			document.getElementById("erid3").innerHTML="Enter a valid 10 digit mobile number";
+		}
+	}
+	
+}
+function errClear3()
+{
+	document.getElementById("erid3").innerHTML="";
+}
+
+function checkFeed()
+{
+	var str = document.getElementById("fdid");
+	regex = /[\w*\d*\s*]{20}/i;
+	
+	if(regex.test(str.value))
+	{
+		return ;
+	}
+	else
+	{
+		if(str.value.length==0)
+		{
+			document.getElementById("erid4").innerHTML="This field is compulsory";
+		}
+		else
+		{
+			document.getElementById("erid4").innerHTML="Enter at least 20 characters";
+		}
+	}
+	
+}
+function errClear4()
+{
+	document.getElementById("erid4").innerHTML="";
+}
+
+//Generate random number for captcha
+
+var captcha;
+function generateCaptcha()
+{
+	var randomNumber;
+	var re = /\d{4}/;
+	while(re.test(randomNumber)==false)
+	{
+		randomNumber = Math.floor((Math.random()*10000));
+		//multiplied by 10000 because random function gives number 0.************ format
+	}
+	captcha = randomNumber.toString();
+	document.getElementById("capid").innerHTML = captcha;
+}
+
+function verifyCaptcha()
+{
+	var str = Number(document.getElementById("vrid").value);
+	//alert(captcha);
+	//alert(str);
+	//var cap = Number(document.getElementById("capid").value);
+	
+	if(str==captcha)
+	{
+		document.getElementById("final").innerHTML="Registeration Successful";
+		
+	}
+	else
+	{
+		if(isNaN(str))
+		{
+			document.getElementById("erid5").innerHTML="Please enter the correct numeric captcha";
+		}
+		else
+		{
+			document.getElementById("erid5").innerHTML="Please enter the correct captcha";
+		}
+	}
+}
+
+function errClear5()
+{
+	document.getElementById("erid5").innerHTML="";
+}
+
+function clearAll()
+{
+	document.getElementById("nmid").value="";
+	document.getElementById("emid").value="";
+	document.getElementById("mbid").value="";
+	document.getElementById("fdid").value="";
+	document.getElementById("vrid").value="";
+	document.getElementById("capid").innerHTML="";
+	errClear1();
+	errClear2();
+	errClear3();
+	errClear4();
+	errClear5();
+	document.getElementById("final").innerHTML="";
+}
+</script>
+
+<h2>Feedback</h2>
+<p style="font-size:13px;">Note all fields are compulsory</p>
+
+<form>
+<table>
+
+
+	<!-- Name -->
+	<tr>
+		<td>
+			Name:
+		</td>
+		<td>
+			<input type="text" id="nmid" name="nmnm" onblur="checkName()" onfocus="errClear1()">
+		</td>
+		<td>
+			<p id="erid1" style="color:red;font-weight:bold;"></p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<p style="font-size:11px; font-style:italic">(eg.Shivam R. Gudmewar)</p>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<!-- Email id -->
+	<tr>
+		<td>
+			Email:
+		</td>
+		<td>
+			<input type="text" id="emid" name="emnm" onblur="checkEmail()" onfocus="errClear2()">
+		</td>
+		<td>
+			<p id="erid2" style="color:red;font-weight:bold;"></p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<p style="font-size:11px; font-style:italic">(eg.abc@xyz.com)</p>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<!-- Mobile number -->
+	<tr>
+		<td>
+			Mobile:
+		</td>
+		<td>
+			<input type="text" id="mbid" name="mbnm" onblur="checkMob()" onfocus="errClear3()">
+		</td>
+		<td>
+			<p id="erid3" style="color:red;font-weight:bold;"></p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+		</td>
+		<td>
+			<p style="font-size:11px; font-style:italic">(eg.9876543210)</p>
+		</td>
+		<td>
+		</td>
+	</tr>
+	<!-- Feedback area -->
+	<tr>
+		<td>
+			Feedback:
+		</td>
+		<td>
+			<textarea style="height:150;width:300;" id="fdid" name="fdnm" onblur="checkFeed()" onfocus="errClear4()"></textarea>
+		</td>
+		<td>
+			<p id="erid4" style="color:red;font-weight:bold;"></p>
+		</td>
+	</tr>
+	<!-- Verification code -->
+	<tr>
+		<td>
+			Verification<br/>
+			Code:
+		</td>
+		<td>
+			<p style="background-color:grey;
+						padding-left:10px;
+						padding-top:20px;
+						padding-right:10px;
+						padding-bottom:20px;
+						width:120px;" align="center" id="capid"></p>
+		</td>
+		<td>
+			<input type="button" id="capbtnid" name="capbtnnm" value="Generate Captcha" onclick="generateCaptcha()">
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			Verify Captcha
+		</td>
+		<td>
+			<input type="text" id="vrid" name="vrnm" onfocus="errClear5()">
+		</td>
+		<td>
+			<p id="erid5" style="color:red;font-weight:bold;"></p>
+		</td>
+	</tr>
+	<!-- Buttons submit and reset -->
+	<tr>
+		<td>
+		</td>
+		<td>
+			<input type="button" id="subid" name="subnm" value="Submit" onclick="verifyCaptcha()">
+			<input type="button" id="resid" name="resnm" value="Reset" onclick="clearAll()">
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+</form>
+<p id="final"></p>
+
+
+</body>
+</html>

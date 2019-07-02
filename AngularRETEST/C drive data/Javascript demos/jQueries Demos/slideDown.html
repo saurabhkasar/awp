@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.4.0.js"></script>
+<script>
+$(document).ready(function()
+{
+	$("#p1").click(function()
+	{
+		$("#p2").slideDown("slow");
+	});
+	
+	$("#btn").click(function()
+	{
+		$("#img").slideDown("slow");
+	});
+});
+
+</script>
+<style> 
+#p1, #p2 
+{
+  padding: 5px;
+  text-align: center;
+  background-color: mistyrose;
+  border: solid 1px silver;
+}
+
+#p2 
+{
+  padding: 50px;
+  display: none;
+}
+#btn, #img 
+{
+  padding: 5px;
+  align: center;
+  border: solid 5px silver;
+}
+
+#img 
+{
+  padding: 50px;
+  display: none;
+}
+</style>
+
+</head>
+<body>
+
+	<p id="p1">DYPIMS , Akurdi</p>
+	<p id="p2">Institute for Advanced Computing and Software Development ( IACSD )</p>
+	
+	<button type="button" value="submit" name="btn1" id="btn">Image</button>
+	<br><br>
+	<img src="C:\Users\user16\Pictures\dyp.jpg" id="img"></img>
+	
+</body>
+</html>

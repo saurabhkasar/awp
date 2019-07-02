@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <script src = "jquery-3.4.0.js">
+      </script>
+		
+      <script>
+         $(document).ready(function() {
+			
+            $("#b1").click(function(event){
+               $.getJSON('result.txt', function(a) {
+                  $('#div1').html('<p>Course 1: ' + a.course1 + '</p>');
+                  $('#div1').append('<p>Course 2 : ' + a.course2+ '</p>');
+				  $('#div1').append('<p>Course 3 : ' + a.course3+ '</p>');
+                  $('#div1').append('<p>Year: ' + a.year+ '</p>');
+               });
+            });
+				
+         });
+      </script>
+   </head>
+	
+   <body>
+	
+      <div id = "div1" style = "background-color:lightyellow;">
+         Your data will load here..
+      </div>
+		
+      <input type = "button" id = "b1" value = "Load Data" />
+   </body>
+</html>

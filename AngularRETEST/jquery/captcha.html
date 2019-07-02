@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script>
+		var cap;
+		function generateCaptcha()
+		{
+			var rNum;
+			var RE=/\d{4}/;
+			while(RE.test(rNum)==false)
+			{
+				rNum=Math.floor((Math.random()*10000));
+				
+			}
+			cap=rNum.toString();
+			document.getElementById("capid").innerHTML = cap;
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Captcha</td>
+			<td>
+			<p style="background-color:lightyellow;
+						padding-left:10px;
+						padding-top:20px;
+						padding-right:10px;
+						padding-bottom:20px;
+						width:90px;" align="center" id="capid"></p>
+			</td>
+			<td><button name="btn1" id="capbtnid" value="Gen captcha" type="button" onclick="generateCaptcha()">Generate CAPTCHA</button></td>
+		</tr>
+	</table>
+</body>
+</html>

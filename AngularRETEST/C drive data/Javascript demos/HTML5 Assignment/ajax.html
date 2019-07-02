@@ -1,0 +1,25 @@
+<html>
+    ,<head>
+        <script>
+
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4  && this.status == 200){
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+
+        <div id="demo">
+            <h2>
+                Let ajax change this text
+                <button type="button" onclick="loadDoc()">change content</button>
+            </h2>
+        </div>
+    </body>
+</html>

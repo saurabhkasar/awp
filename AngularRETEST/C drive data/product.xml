@@ -1,0 +1,16 @@
+<products>
+<product>
+      <prodid>1000</prodid>
+      <pname>Lays</pname>
+      <category>chips</category>
+      <price>30.00</price>
+      <qty>45</qty>
+  </product>
+  <product>
+      <prodid>1001</prodid>
+      <pname>Pepsi</pname>
+      <category>cold drink</category>
+      <price>50.00</price>
+      <qty>100</qty>
+  </product>
+</products>

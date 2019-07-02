@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<script>
+	function search()
+	{
+		//var str = document.getElementById("myid").innerHTML;
+		var str=prompt("Enter string 1: ");
+		var searchstr = prompt("Enter the string 2 :");
+		var position = str.indexOf(searchstr);
+		//alert("position : "+position);
+		
+		//to count multiple occurances
+		while(position!=-1)
+		{
+			alert("position : "+position);
+			position=str.indexOf(searchstr,position+1);
+		}
+	}
+	search();
+</script>
+</head>
+<body>
+
+<!--<p id="myid" onclick="search()">
+Life is all about next chance.Life is Beautifull.
+</p>-->
+</body>
+</html>

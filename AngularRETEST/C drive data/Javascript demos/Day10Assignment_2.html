@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+	function Google() {
+  window.location.assign("https://www.google.com")
+}
+	function windowOpen() 
+	{
+  var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+  myWindow.document.write("<p>Welcome to IACSD.....</p>");
+	}
+</script>
+
+</head>
+
+<body>
+	<br><br><br>
+	<button type="submit" name="btn" value="submit1" onclick="Google()">1</button>
+	<button type="submit" name="btn" value="submit2" onclick="windowOpen()">2</button>
+	<button type="submit" name="btn" value="submit3">3</button>
+</body>
+</html>

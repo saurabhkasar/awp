@@ -1,0 +1,36 @@
+<html>
+<head>
+<script>
+	function searchstr()
+	{
+	var str = document.getElementById("myid").innerHTML;
+	//display all ooccurances of pattern
+	var pattern =/if/gi;
+	//o/p:if,if,if
+	
+	//display all consonants
+	var pattern2 =/[^aeiou]/gi;
+	
+	//display anything other than digits
+	var pattern3 =/[^0-9]/gi;
+	
+	//display digits only
+	var pattern4 =/[^A-Z a-z]/gi;
+	
+	//display e's only
+	var pattern5 =/[e]/gi;
+	
+	//
+	var pattern6 = /i(.*?)a/gi;
+	
+	var arr = str.match(pattern6);
+	alert (arr);
+	}
+</script>
+</head>
+<body>
+<p id="myid" onclick="searchstr()">
+Life is all about next chance.Roll N.1048 Life is Beautifull.
+</p>
+</body>
+</html>

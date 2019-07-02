@@ -1,0 +1,47 @@
+<html>
+<head>
+<script src="jquery-3.4.0.js"></script>
+<script>
+$(document).ready(function()
+{
+	$('p').click(function()
+	{
+	alert("Hello");
+	});
+	//$(this).css("color","red");
+	
+	$("#myid").css({"color":"red",
+			              "background-color":"lightyellow",
+						  "border":"4px solid brown"});
+						  
+	$("#id3").css({"color":"blue","background-color":"lightyellow",
+						  "border":"4px solid brown"});
+						  
+	$('div p:first-child').css({"color":"dodgerblue","background-color":"lightyellow"});
+	
+	$('div:contains("Nilima")').css({"color":"white","background-color":"black"});
+});
+</script>
+</head>
+<body>
+<p> Wel-Come to IACSD </p>
+
+<p id="myid"> Wel-Come to IACSD </p>
+<br><br>
+<p id="id3"> Jquery Demos with CSS
+	AAAAAAAAAAAAAAAAAAAA</p>
+<br>	
+	
+<div>
+<p id="myid"> Jquery Demos with CSS
+	AAAAAAAAAAAAAAAAAAAA</p>
+
+<p>Nilima D Wakhare</p>
+</div>
+
+<div>
+Nilima
+<p>Megha Patil ,Roll no.1050</p>
+</div>
+</body>
+</html>

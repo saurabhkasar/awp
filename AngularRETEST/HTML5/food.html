@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 
+ <script>
+	function getData()
+	{
+		var name = document.getElementById("n1").value;
+		var date = document.getElementById("bd").value;
+		var email = document.getElementById("e1").value;
+		//var g = document.getElementById("t1").value;
+		var check1=document.getElementById("x");
+		var check2=document.getElementById("y");
+		var gender;
+		if(check1.checked==true)
+		{
+		gender=document.getElementById("x").value;
+		}
+		else 
+		{
+		gender=document.getElementById("y").value;
+		}
+		
+//		var gender = document.getElementById("r1").checkhed;
+		var luckynum = document.getElementById("luck").value;
+		//var food=document.getElementById(f1).checked.innerHTML;
+		
+		var items=document.getElementsByName('c1');
+				var selectedItems="";
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox' && items[i].checked==true)
+						selectedItems+=items[i].value+"\n";
+						
+				}
+				//alert(selectedItems);
+				
+				
+				
+		//var result = name + ' ' + date + ' '+email+' '+gender+' '+luckynum+;
+		//var result = "<br><br>"+name+"<br>"+date+"<br>"+email+"<br>"+gender+"<br>"+luckynum;
+		
+		
+		//document.getElementById('spanResult').innerHTML = result;
+		
+		
+		document.write("name="+name+"<br>");
+		document.write("date="+date+"<br>");
+		document.write("email="+email+"<br>");
+		document.write("gender="+gender+"<br>");
+		document.write("luckynum="+luckynum+"<br>");
+		document.write("food="+selectedItems+"<br>");
+		//alert('Is checked? ' + document.getElementById('f1').checked);
+		
+		//document.write("name="+food);
+		/*var sel = document.getElementById("myid");
+		var obj = document.createElement("td");
+		obj.text = name;
+		
+		sel.appendChild(obj);*/
+	}
+ </script>
+ </head>
+ <body>
+ <form>
+ <table border="1">
+ <tr>
+ <td>NAME </td>
+ <td><input type="text" name="nm" id="n1"></input></td>
+ </tr>
+ <tr>
+ <td>Birth Date</td>
+ <td><input type="date" name="dob" id="bd"></input></td>
+ </tr>
+ <tr>
+ <td>Email Address </td>
+ <td><input type="email" name="myemail" id="e1" required></input></td>
+ </tr>
+ <tr>
+ <td>Gender</td>
+ <td>
+ <div id="t1">
+ <input type="radio" name="r1"  id="x" value="male">Male</input><br>
+ <input type="radio" name="r1"  id="y" value="female">Female</input>
+ </div>
+ </td>
+ </tr>
+ <tr>
+ <td>Lucky Number</td>
+ <td><input type="text" name="lm" id="luck"></input></td>
+ </tr>
+ <tr>
+ <td>Favorite Food</td>
+ <td><input type="checkbox" name="c1"  id="f2" value="Pizza">Pizza<br>
+ <input type="checkbox" name="c1"  id="f3" value="Pasta">Pasta<br>
+ <input type="checkbox" name="c1"  id="f1" value="Chinese">Chinese</td>
+ </tr>
+ <tr>
+ <td>
+ <button type="button" name="btn" value="submit" onclick="getData()">Send Data</button>
+ </td>
+ </tr>
+ <tr id="myid">
+ 
+ </tr>
+ </table>
+ </form>
+ <br>
+ <input type="button" value="Is Checkbox checked?" onclick="alert('Is checked? ' + document.getElementById('f1').checked);" />
+ 
+  <span id="spanResult">
+	<h3>Your data is below : </h3>
+  </span>
+ </body>
+ </html>

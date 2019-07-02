@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="jquery-3.4.0.js" ></script>
+<script>
+$(document).ready(function(){
+$('.btn').click(function(){  //on button click changes will occures
+$('div span:first-child').css({"color":"Blue", "background-color":"pink"});
+$('p:even').css({"color":"Green", "background-color":"lightyellow"});
+
+});
+});
+
+</script>
+</head>
+<body>
+<div>
+   <span>this is span</span>
+<p id="myid">this <span>this is span</span>is</p>
+<p>this is para2</p>    p:contains('para')
+</div>
+<p> This is even para 1</p>
+<p> This is odd para 2</p>
+<p> This is even para 1</p>
+<p> This is odd para 2</p>
+<p> This is even para 1</p>
+<p> This is odd para 2</p>
+<div><span> Game over</span> <span>End Game</span></div>
+<button type="button" class="btn" > Click me</button>
+</body>
+</html>

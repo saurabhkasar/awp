@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<div id="myid"></div>
+<script>
+var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+xmlDoc.load("product.xml");
+var plist=xmlDoc.getElementsByTagName("product");
+alert(plist.length);
+var str='<table border="1">';
+for(var i=0;i<plist.length;i++)
+{
+     str+="<tr>";
+     var chlist=plist.item(i).childNodes;
+	 alert(plist.item(i).nodeName);
+     alert(chlist.length);
+	 for(j=0;j<chlist.length;j++){
+         str+="<td>"+chlist.item(j).text+"</td>";
+		 alert(chlist.item(j).nodeName);
+     }
+	 str+="</tr>";
+}
+str+="</table>";
+alert(str);
+document.getElementById("myid").innerHTML=str;
+</script>
+</body>
+</html>

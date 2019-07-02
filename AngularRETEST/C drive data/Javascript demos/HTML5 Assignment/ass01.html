@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script>
+        function searchstring(){
+            var str = document.getElementById("myid").innerHTML;
+            var searchstr = prompt("enter a string");
+            var pos = str.indexOf(searchstr);
+            while(pos != -1){
+                alert("Positon:"+pos);
+                pos = str.indexOf(searchstr , pos+1);
+            }
+        }
+     </script>
+</head>
+
+<body>
+<button type="submit" name="search" onclick="searchstring()">search</button>
+<p id="myid" >Hello ,How are you?Welcome Home,I was waiting for you.Hello</p>
+</body>
+</html>

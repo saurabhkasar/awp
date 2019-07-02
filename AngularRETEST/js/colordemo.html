@@ -1,0 +1,99 @@
+<html>
+<head>
+<script>
+	function colorsred()
+	{
+		var d = document.getElementById("userid");
+		d.style.color="red";
+		
+	}
+	function colorsgreen()
+	{
+		var d = document.getElementById("userid");
+		d.style.color="green";
+		
+		//d.style.background-color="lightyellow";
+		
+	}
+	function bigsize()
+	{
+		var d2 = document.getElementById("myid");
+		d2.style.fontSize="xx-large";
+		
+	}
+	function changebgcolor()
+	{
+		var d3 = document.getElementById("myform");
+		d3.style.backgroundColor = "red";
+	}
+	function changetbcolor()
+	{
+		/* var d4 = document.getElementById("11");
+		var d5 = document.getElementById("12");
+		var d6 = document.getElementById("13");
+		d4.style.backgroundColor = "lightyellow";
+		d5.style.backgroundColor = "lightyellow";
+		d6.style.backgroundColor = "lightyellow"; */
+		var d4 = document.getElementById("11");
+		d4.style.backgroundColor = "lightyellow";
+	}
+	
+	function changetbcolor1()
+	{
+		
+		var d4 = document.getElementById("12");
+		d4.style.backgroundColor = "lightyellow";
+	}
+	function changetbcolor2()
+	{
+		
+		var d4 = document.getElementById("13");
+		d4.style.backgroundColor = "lightyellow";
+	}
+	
+	function bodycolor()
+	{
+		var b = document.getElementById("body");
+		b.style.backgroundColor = "Cyan";
+	}
+	
+	function image()
+	{
+	//var i = document.getElementById("body");
+	// i.style.background-image="Libraries\Documents\1.jpeg";
+	document.getElementById("img").innerHTML = "<img src='rain.jpg' align='right'/>"
+	}
+		
+</script>
+</head>
+<body id="body">
+
+<p id="userid" onmouseover="colorsred()" onmouseout="colorsgreen()">
+	Nilima D Wakhare,<br>
+	IACSD,PG-DAC,<br>
+	Batch-A,<br>
+	Roll No.1048<br>
+</p>
+
+<p id="myid" onmouseover="bigsize()">
+To be or not to be that is the question!!!! <br>
+wrkbguwr <br>
+vrbil4bgun<br>
+irugruighn<br>
+</p>
+
+<fieldset>
+<form id="myform">
+Name: <input type="text" name="name" id="11" oninput="changetbcolor()">  </input>
+Degree: <input type="text" name="degree" id="12" oninput="changetbcolor1()">  </input>
+Salary: <input type="text" name="salary" id="13" oninput="changetbcolor2()">  </input> <br> <br><br>
+<button type="button" id="1" value="Change BG Color" onclick="changebgcolor()" > Change BG Color </button>
+<button type="button" id="2" value="Change TB Color" onclick="image()"> Change Image </button>
+<button type="button" id="3" value="Add Image" onclick="bodycolor()"> Change BG Color </button><br><br>
+
+
+<p id="img"></P>
+</form>
+</fieldset>
+</body>
+</html>

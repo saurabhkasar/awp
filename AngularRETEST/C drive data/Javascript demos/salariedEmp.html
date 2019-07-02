@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+ function Employee(eno,name)
+ {
+        Employee.company="N-World pvt ltd";
+        this.empno=eno;
+		this.ename=name;
+		/*this.addr=addr;
+		this.sal=sal;
+		this.calcsal=function()
+		{
+		
+		    return this.sal+5000;
+		}*/
+ }
+ var e1=new Employee(101,'Nil');
+ /*for(p in e1)
+ {
+	alert(e1[p]);
+ }*/
+ alert(Employee.company);
+ 
+ function semp()
+ {
+ salariedemp={sal:50000,bonus:10000}; 
+ salariedemp.__proto__=e1;
+ //salariedemp.prototype=e1;
+ for(p in salariedemp)
+ {
+	//if(salariedemp.hasOwnproperty(p))
+	//{
+		alert(p+"   "+salariedemp[p]);
+	/*}*/
+ }
+ }
+ var s1=new semp();
+ for(p in s1)
+ {
+	alert(s1[p]);
+ }
+
+
+</script>
+</head>
+<body >
+
+</body>
+
+</html>

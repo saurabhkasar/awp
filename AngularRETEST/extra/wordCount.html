@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script>
+			function count()
+			{
+				var cnt=document.myform.txt.value
+				cnt=cnt.split(",")
+				//cnt=cnt.split(" ")-----u can use this also
+				document.myform.txt2.value=cnt.length
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform">
+			<textarea name="txt" row="10" cols="40"></textarea><br><br>
+			<button type="button" value="btn1" onclick="count()">Count Words</button>
+			<input type="text" name="txt2" size="10">
+		</form>
+	</body>
+</html>

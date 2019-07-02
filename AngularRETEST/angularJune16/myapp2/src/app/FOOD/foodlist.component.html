@@ -1,0 +1,23 @@
+<div>
+    <ul>
+        <li *ngFor="let i of foodArray">{{i.Id}}............{{i.name}}.........Rs.{{i.price}}</li>
+    </ul>
+</div>
+
+
+<div>
+    <table border="2" cellspacing="5" cellpadding="3" width="400" class="tab">
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+
+         <tr  *ngFor="let i of foodArray">
+             <td>{{i.Id}}</td>
+             <td><a href="assets/p.html"><img width="50" height="30" alt="food Logo" src="assets/Images/logo.jpg"></a></td>
+             <td>{{i.name}}</td>
+             <td>Rs.{{i.price}}</td>
+         </tr>       
+    </table>
+
+</div>

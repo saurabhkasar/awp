@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+/*function myFunction() {
+  var para = document.createElement("P");
+  para.innerText = "Nilima D Wakhare,   IACSD,PG-DAC,    Batch-A,    Roll No.1048";
+  //document.body.appendChild(para);
+  document.body.insertBefore(para);
+}*/
+
+
+
+	function function1()
+	{
+		var d = document.createElement("p");
+		d.innerText="Hello,....!!!!";
+		d.id="mypara";
+		var d2 = document.getElementById("myid");
+		//d2.appendChild(d);
+		document.body.appendChild(d);
+		d2.insertBefore(d,d2.childNodes[0]);
+	}
+	function remove()
+	{
+		var d = document.createElement("p");
+		d.innerText="Hello,....!!!!";
+		d.id="mypara";
+		var d2 = document.getElementById("myid");
+		//d2.appendChild(d);
+		//document.body.appendChild(d);
+		//d2.insertBefore(d,d2.childNodes[0]);
+		d2.removeChild(d2.childNodes[0]);
+	}
+	
+</script>
+</head>
+<body>
+	<button type="button" name="btn" value="button1" onclick="function1()">Display Paragraph</button>
+	<button type="button" name="btn" value="button2" onclick="remove()">Remove Paragraph</button>
+	<div id="myid">Div first line....</div>
+</body>
+</html>

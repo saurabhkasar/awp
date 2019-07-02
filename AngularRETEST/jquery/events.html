@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script src="jquery-3.4.0.js"></script>
+	<script>
+		console.log("Hello World");
+		$(document).ready(function()
+		{
+			$("#btn2").bind('click',function()
+			{
+				var i=$('input[name="txt"]').clone();
+				$("#mydiv").append(i);
+			});
+				$("#btn1").click(function()
+				{
+					//copy btn2
+					var btn2copy=$("#btn2").clone();
+					$("#mydiv").append(btn2copy);
+				});
+				
+				$("#btn2").click(function()
+				{
+					var copyP=$("#ptag").clone();
+					$("#myid").append(copyP);
+					
+				});
+				
+				//unbind the events on button 1 and 2
+				//$('#btn2').unbind("click");
+				//$('#btn1').unbind("click");
+			
+		});
+	</script>
+</head>
+<body>
+<div id="parent">
+	<button type="button" name="btn" id="btn1" >This is Button 1 : Going to Copy Button 2</button>
+	<button type="button" name="btn" id="btn2">Button 2</button>
+	<p id="ptag">Copy of P tag</p>
+	<div id="mydiv">
+		<input type="text" name="txt">
+		
+	</div>
+</div>
+<div id="myid"></div>
+	
+</body>
+</html>

@@ -1,0 +1,11 @@
+.logo{
+	background-color:midnightblue;
+}
+.menu{
+	color:white;
+	float:right;
+}
+.list li{
+	margin-left:10px;
+	display:inline;
+}

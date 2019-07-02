@@ -1,0 +1,33 @@
+<!--<html>
+<head>
+<script>
+	function function1()
+	{
+		var d = document.createElement("input");
+		d.type="text";
+		d.name="txt";
+		var d2 = document.getElementById("myid");
+		d2.appendChild(d);
+	}
+	
+</script>
+</head>
+<body>
+	<button type="button" name="btn" value="button" onclick="function1()">Display Paragraph</button>
+	<div id="myid"></div>
+</body>
+</html>-->
+<html>
+<body>
+<button onclick="myFunction()">Add TextBox</button>
+<br><br>
+<script>
+function myFunction() {
+  var txt = document.createElement("input");
+  txt.type="text";
+  txt.name="textbox";
+  document.body.appendChild(txt);
+}
+</script>
+</body>
+</html>

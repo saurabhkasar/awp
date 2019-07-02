@@ -1,0 +1,49 @@
+<html>
+<head>
+<script src="jquery-3.4.0.js"></script>
+<style>
+	#div1
+	{
+	width:80px; 
+	height:80px; 
+	background-color:red;
+	display:none;
+	}
+	
+	#div2
+	{
+	width:80px; 
+	height:80px; 
+	background-color:yellow;
+	
+	}
+
+</style>
+<script>
+	$(document).ready(function()
+	{
+		$("button").click(function()
+		{
+			$("#div1").fadeIn(3000);
+		
+			$("#b2").click(function()
+			{
+			$("#div2").fadeOut(3000);
+		});
+		
+	});
+	
+});
+</script>
+
+</head>
+<body>
+	<button>FadeIn</button><br><br>
+	
+	
+	<div id="div1"></div><br>
+	<br>
+	<button id="b2">FadeOut</button><br><br>
+	<div id="div2"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script src = "jquery-3.4.0.js"> </script>
+		
+      <script>
+         $(document).ready(function() 
+		 {
+			
+            $("#b1").click(function(event)
+			{
+               $.get("getMethod.php",
+                  { name: "IACSD,Akurdi" },
+                  function(data) 
+				  {
+                     $('#p1').html(data);
+                  });
+            });
+				
+         });
+      </script>	
+   </head>
+	
+   <body>
+      
+      <p id = "p1" style = "background-color:lightyellow;">
+         Your data is here
+      </p>
+		
+      <div>
+	  <input type = "button" id = "b1" 
+         value = "Load Data" />
+	  </div>
+	
+   </body>
+</html>

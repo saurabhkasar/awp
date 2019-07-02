@@ -1,0 +1,33 @@
+<friends>
+	<myself>
+			<name>Nilima Wakhare</name>
+			<city>Jalgaon</city>
+			<class>PG-DAC</class>
+			<loc>@IACSD,Akurdi</loc>
+			<rollno>1048</rollno>
+    </myself>
+				<friend>
+					<name>MEGHA PATIL</name>
+					<city>Islampur</city>
+					<class>PG-DAC</class>
+					<loc>@IACSD,Akurdi</loc>
+					<rollno>1050</rollno>
+				</friend>
+		
+				<friend>
+					<name>TEJASWINI KALE</name>
+					<city>Amaravati</city>
+					<class>PG-DAC</class>
+					<loc>@IACSD,Akurdi</loc>
+					<rollno>1094</rollno>
+				</friend>
+		
+				<friend>
+					<name>SAURABH KASAR</name>
+					<city>Nashik</city>
+					<class>PG-DAC</class>
+					<loc>@IACSD,Akurdi</loc>
+					<rollno>1029</rollno>
+				</friend>
+				
+</friends>
